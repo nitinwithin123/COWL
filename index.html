@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>COWL x CAPS</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME CSS -->
+<link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+     <!-- FLEXSLIDER CSS -->
+<link href="assets/css/flexslider.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />    
+  <!-- Google	Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+   
+    <script>
+	function check()
+	{
+		window.location.href = 'ques.html';
+	}
+    </script>
+
+</head>
+<body >
+   
+ <div class="navbar navbar-inverse navbar-fixed-top " id="menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img class="logo-custom" src="assets/img/caps_logo.png" alt=""  width="550px"  /> </a>
+            </div>
+            <a class=" navbar-right navbar-center" href="#"><font size="30" color="#ffffff">COWL</font><img class="logo-custom" src="assets/img/COWL.jpg" height="70px"></a>
+            <div class="navbar-collapse collapse move-me">                
+                <ul class="nav navbar-nav navbar-center">
+                    <li ><a href="#">HOME</a></li>
+                     <li><a href="#">COURSES</a></li>
+                     <li><a href="#">CONTACT US</a></li>
+                </ul>
+            
+           
+            </div>
+        </div>
+     
+    </div>
+    
+    
+    
+    <!---- END of HEADER---->
+
+    <div class="row">
+        <div class="col-xs-4 ">
+    <div class="sidenav" id="menu">
+        
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse move-me">
+                <ul class=" navbar-collapse">
+                    <li><a href="#">LEsson1</a></li>
+                    <li><a href="#">lesson2</a></li>
+                </ul>
+            </div>
+       
+    </div>
+        </div>
+
+      <!--NAVBAR SECTION END-->
+        
+<div >
+      <div id="player"></div>
+
+ 
+
+    <script>
+
+      // 2. This code loads the IFrame Player API code asynchronously.
+
+      var tag = document.createElement('script');
+
+ 
+
+      tag.src = "https://www.youtube.com/iframe_api";
+
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+ 
+
+      // 3. This function creates an <iframe> (and YouTube player)
+
+      //    after the API code downloads.
+
+      var player;
+
+      function onYouTubeIframeAPIReady() {
+
+        player = new YT.Player('player', {
+
+          height: '390',
+
+          width: '640',
+
+          videoId: 'SMYMDX9YBMw',
+
+          events: {
+
+            'onReady': onPlayerReady,
+
+            'onStateChange': onPlayerStateChange
+
+          }
+
+        });
+
+      }
+
+ 
+
+      // 4. The API will call this function when the video player is ready.
+
+      function onPlayerReady(event) {
+
+        event.target.playVideo();
+
+      }
+
+ 
+
+      // 5. The API calls this function when the player's state changes.
+
+      //    The function indicates that when playing a video (state=1),
+
+      //    the player should play for six seconds and then stop.
+
+      var done = false;
+
+      function onPlayerStateChange(event) {
+
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+
+          console.log("1");
+
+        }
+
+         if(event.data==YT.PlayerState.ENDED){
+
+                  console.log("0");
+
+                 // document.getElementById("switch").style.display="block";
+                  document.getElementById("switch").disabled = false;   
+
+                }
+
+      }
+
+ 
+
+    </script>
+
+    <button id=switch onclick = "check()" disabled>Sample</button>
+
+        </div>
+
+
+
+     <!-- CONTACT SECTION END-->
+    <div id="footer">
+        
+          &copy Tech Tank| All Rights Reserved |  <a href="http://binarytheme.com" style="color: #fff" target="#">Design by : Tech Tank x COWL!</a>
+    </div>
+     <!-- FOOTER SECTION END-->
+   
+    <!--  Jquery Core Script -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Flexslider Scripts --> 
+         <script src="assets/js/jquery.flexslider.js"></script>
+     <!--  Scrolling Reveal Script -->
+    <script src="assets/js/scrollReveal.js"></script>
+    <!--  Scroll Scripts --> 
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!--  Custom Scripts --> 
+         <script src="assets/js/custom.js"></script>
+</body>
+</html>
