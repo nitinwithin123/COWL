@@ -16,103 +16,8 @@
     <link href="assets/css/style.css" rel="stylesheet" />    
   <!-- Google	Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
-    
-<script>
-
-
-function validate_ans()
-{
-	window.location.href = 'ques_3.html';
-}
-
-
-function myfunction()
-{
-  
-
-	var correctAnswers = 0;
-
-	var q1=document.f1.ques1;  
-	var q2=document.f1.ques2;  
-	var q3=document.f1.ques3;  
-	var q4=document.f1.ques4; 
-	var q5=document.f1.ques5;  
-  
-	var k=0;
-
-	for(var j=0;j<q1.length;j++)
-	{
-	   if(q1[j].checked)
-		{
-		k=1;
-		if(q1[j].value == 'Reading content after a break') 
-		{
-	            	correctAnswers++;
-		}
-		}
-	}
-	for(var j=0;j<q2.length;j++)
-	{
-	   if(q2[j].checked)
-		{
-		k=2;
-		if(q2[j].value == 'All of the above') 
-		{
-	            	correctAnswers++;
-		}
-		}
-	}
-	for(var j=0;j<q3.length;j++)
-	{
-	   if(q3[j].checked)
-		{
-		k=3;
-		if(q3[j].value == 'To understand the key points the question poses and check if answer relates to the points.') 
-		{
-	            	correctAnswers++;
-		}
-		}
-	}
-	for(var j=0;j<q4.length;j++)
-	{
-	   if(q4[j].checked)
-		{
-		k=4;
-		if(q4[j].value == 'Use apt words for each situation') 
-		{
-	            	correctAnswers++;
-		}
-		}
-	}
-	for(var j=0;j<q5.length;j++)
-	{
-	   if(q5[j].checked)
-		{
-		k=5;
-		if(q5[j].value == 'Follow a particular format throughout') 
-		{
-	            	correctAnswers++;
-		}
-		}
-	}
-
-	if(k==5)
-	{
-		document.getElementById("p1").disabled = false;     
-		//alert("You can move to next page"); 
-
-	}
-
-
-}
-
-function button_disable()
-{
-document.getElementById("p1").disabled = true;
-}
-</script>
 </head>
-<body onload =button_disable()>
+<body >
     <div class="navbar navbar-inverse navbar-fixed-top" id="menu">
         <div class="container ">
              <a class="navbar-right navbar-center text" href="#">COWL<img class="logo-custom" src="assets/img/COWL.jpg" height="70px"></a>
@@ -224,53 +129,56 @@ document.getElementById("p1").disabled = true;
         </div>
          </div>
     </div>
-    
     <!--END OF ALL MENUS---->
     
     <div class="main">
         <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4">
-    <h1>CAPS COWL PROTOTYPE</h1>
-  
-<form name="f1" action="">
-FORM QUESTIONS--------- <br><br><br>
-<label>1.Methods to re-check your SOP are:</label>
-<br><input type="radio"  onclick="myfunction()" name="ques1" value="ans1">Reading the piece backwards<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans2">Taking advice from professors<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans3">Reading content after a break<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans4">All of the above<br><br>
+            <div id="player">
+            </div>
+            <script>
+                // 2. This code loads the IFrame Player API code asynchronously.
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                // 3. This function creates an <iframe> (and YouTube player)
+                //    after the API code downloads.
+                var player;
+                function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('player', {
+                        height: '390',
+                        width: '640',
+                        videoId: 'SMYMDX9YBMw',
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                }
 
-<label>2.What are the basic components that are to be included your SoP?</label>
-<br><input type="radio" onclick="myfunction()" name="ques2" value="ans1">Central Theme<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans2">Credibility<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans3">Uniqueness<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans4">All of the above<br><br>
+                // 4. The API will call this function when the video player is ready.
+                function onPlayerReady(event) {
+                   // event.target.playVideo();
+                }
 
-<label>3.Why should the central theme be given importance in a Statement of Purpose:</label>
-<br><input type="radio" onclick="myfunction()" name="ques3" value="ans1">To understand the key points the question poses and check if answer relates to the points. <br>
-   <input type="radio" onclick="myfunction()" name="ques3" value="ans2">To Understand the key points in the question and criticise the points <br>
-   <input type="radio"  onclick="myfunction()" name="ques3" value="ans3">To Understand the key points and fabricate facts<br>
-   <input type="radio" onclick="myfunction()" name="ques3" value="ans4">All of the above<br><br>
-
-<label>4.To make my Statement of Purpose unique, I will</label>
-<br><input type="radio" onclick="myfunction()" name="ques4" value="ans1">Replace common words with synonyms  <br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans2">Use apt words for each situation <br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans3">Use sans serif fonts<br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans4">Use different fonts for different sections<br><br>
-
-<label>5.To make a uniform structure in my Statement of Purpose, I will:</label>
-<br><input type="radio" onclick="myfunction()" name="ques5" value="ans1">Follow a particular format throughout <br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans2">Use different fonts for different section <br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans3">Use same format for heading and body<br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans4">Make heading and body bold<br><br>
-
-
-
-<button type="button" id ="p1" onclick = "validate_ans()">Click Me!</button> 
-</form>
-
-
-
+                // 5. The API calls this function when the player's state changes.
+                //    The function indicates that when playing a video (state=1),
+                //    the player should play for six seconds and then stop.
+                var done = false;
+                function onPlayerStateChange(event) {
+                    if (event.data == YT.PlayerState.PLAYING && !done) {
+                        console.log("1");
+                    }
+                    if(event.data==YT.PlayerState.ENDED){
+                        console.log("0");
+                        // document.getElementById("switch").style.display="block";
+                        document.getElementById("switch").disabled = false;   
+                    }
+                }
+ 
+            </script>
+            <button id=switch onclick = "check()" disabled>Sample</button>
 
         </div>
         </div>
