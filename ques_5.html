@@ -22,15 +22,14 @@
 
 function validate_ans()
 {
-	window.location.href = 'ques_3.html';
+	window.location.href = 'ques_.html';
 }
 
 
 function myfunction()
 {
   
-
-	var correctAnswers = 0;
+var correctAnswers = 0;
 
 	var q1=document.f1.ques1;  
 	var q2=document.f1.ques2;  
@@ -45,7 +44,7 @@ function myfunction()
 	   if(q1[j].checked)
 		{
 		k=1;
-		if(q1[j].value == 'Reading content after a break') 
+		if(q1[j].value == 'Discussion with friends, parents or professors') 
 		{
 	            	correctAnswers++;
 		}
@@ -56,7 +55,7 @@ function myfunction()
 	   if(q2[j].checked)
 		{
 		k=2;
-		if(q2[j].value == 'All of the above') 
+		if(q2[j].value == 'Unrelated hobbies') 
 		{
 	            	correctAnswers++;
 		}
@@ -67,7 +66,7 @@ function myfunction()
 	   if(q3[j].checked)
 		{
 		k=3;
-		if(q3[j].value == 'To understand the key points the question poses and check if answer relates to the points.') 
+		if(q3[j].value == 'Introspection and deep thinking') 
 		{
 	            	correctAnswers++;
 		}
@@ -78,7 +77,7 @@ function myfunction()
 	   if(q4[j].checked)
 		{
 		k=4;
-		if(q4[j].value == 'Use apt words for each situation') 
+		if(q4[j].value == 'Yes') 
 		{
 	            	correctAnswers++;
 		}
@@ -89,7 +88,7 @@ function myfunction()
 	   if(q5[j].checked)
 		{
 		k=5;
-		if(q5[j].value == 'Follow a particular format throughout') 
+		if(q5[j].value == 'False') 
 		{
 	            	correctAnswers++;
 		}
@@ -230,39 +229,35 @@ document.getElementById("p1").disabled = true;
     <div class="main">
         <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4">
+   
     <h1>CAPS COWL PROTOTYPE</h1>
-  
 <form name="f1" action="">
 FORM QUESTIONS--------- <br><br><br>
-<label>1.Methods to re-check your SOP are:</label>
-<br><input type="radio"  onclick="myfunction()" name="ques1" value="ans1">Reading the piece backwards<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans2">Taking advice from professors<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans3">Reading content after a break<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans4">All of the above<br><br>
+<label>1.Which one would you think might be a better option to revise your SoP?</label>
+<br><input type="radio"  onclick="myfunction()" name="ques1" value="ans1">Using different fonts to make it attractive <br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="ans2">Discussion with friends, parents or professors<br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="ans3">Reading it to yourself thinking it to be absolute<br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="ans4">None of the above<br><br>
 
-<label>2.What are the basic components that are to be included your SoP?</label>
-<br><input type="radio" onclick="myfunction()" name="ques2" value="ans1">Central Theme<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans2">Credibility<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans3">Uniqueness<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans4">All of the above<br><br>
+<label>2.To justify your experience, which of the following should not be included:</label>
+<br><input type="radio" onclick="myfunction()" name="ques2" value="ans1">Skill Set<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans2">Internships<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans3">Unrelated hobbies<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans4">Volunteering<br><br>
 
-<label>3.Why should the central theme be given importance in a Statement of Purpose:</label>
-<br><input type="radio" onclick="myfunction()" name="ques3" value="ans1">To understand the key points the question poses and check if answer relates to the points. <br>
-   <input type="radio" onclick="myfunction()" name="ques3" value="ans2">To Understand the key points in the question and criticise the points <br>
-   <input type="radio"  onclick="myfunction()" name="ques3" value="ans3">To Understand the key points and fabricate facts<br>
+<label>3.Influential people in your life will help you in better:</label>
+<br><input type="radio" onclick="myfunction()" name="ques3" value="ans1">Introspection and deep thinking<br>
+   <input type="radio" onclick="myfunction()" name="ques3" value="ans2">Revision of SOP<br>
+   <input type="radio"  onclick="myfunction()" name="ques3" value="ans3">Application to the University<br>
    <input type="radio" onclick="myfunction()" name="ques3" value="ans4">All of the above<br><br>
 
-<label>4.To make my Statement of Purpose unique, I will</label>
-<br><input type="radio" onclick="myfunction()" name="ques4" value="ans1">Replace common words with synonyms  <br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans2">Use apt words for each situation <br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans3">Use sans serif fonts<br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans4">Use different fonts for different sections<br><br>
+<label>4.Should you be answering any questions that might be asked in an interview, while writing an essay?</label>
+<br><input type="radio" onclick="myfunction()" name="ques4" value="ans1">Yes<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="ans2">No<br><br>
 
-<label>5.To make a uniform structure in my Statement of Purpose, I will:</label>
-<br><input type="radio" onclick="myfunction()" name="ques5" value="ans1">Follow a particular format throughout <br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans2">Use different fonts for different section <br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans3">Use same format for heading and body<br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans4">Make heading and body bold<br><br>
+<label>5.Knowledge about university is not really essential when you write a Statement of Purpose :</label>
+<br><input type="radio" onclick="myfunction()" name="ques5" value="ans1">True<br>
+   <input type="radio" onclick="myfunction()" name="ques5" value="ans2">False<br><br>
 
 
 

@@ -22,14 +22,13 @@
 
 function validate_ans()
 {
-	window.location.href = 'ques_3.html';
+	window.location.href = 'ques_4.html';
 }
 
 
 function myfunction()
 {
   
-
 	var correctAnswers = 0;
 
 	var q1=document.f1.ques1;  
@@ -37,6 +36,10 @@ function myfunction()
 	var q3=document.f1.ques3;  
 	var q4=document.f1.ques4; 
 	var q5=document.f1.ques5;  
+	var q6=document.f1.ques6;
+	var q7=document.f1.ques7;
+	var q8=document.f1.ques8;
+	var q9=document.f1.ques9;
   
 	var k=0;
 
@@ -45,7 +48,7 @@ function myfunction()
 	   if(q1[j].checked)
 		{
 		k=1;
-		if(q1[j].value == 'Reading content after a break') 
+		if(q1[j].value == 'UK') 
 		{
 	            	correctAnswers++;
 		}
@@ -67,7 +70,7 @@ function myfunction()
 	   if(q3[j].checked)
 		{
 		k=3;
-		if(q3[j].value == 'To understand the key points the question poses and check if answer relates to the points.') 
+		if(q3[j].value == '600-1000') 
 		{
 	            	correctAnswers++;
 		}
@@ -78,7 +81,7 @@ function myfunction()
 	   if(q4[j].checked)
 		{
 		k=4;
-		if(q4[j].value == 'Use apt words for each situation') 
+		if(q4[j].value == 'Two-Three') 
 		{
 	            	correctAnswers++;
 		}
@@ -89,17 +92,61 @@ function myfunction()
 	   if(q5[j].checked)
 		{
 		k=5;
-		if(q5[j].value == 'Follow a particular format throughout') 
+		if(q5[j].value == 'Personal Essay') 
 		{
 	            	correctAnswers++;
 		}
 		}
 	}
-
-	if(k==5)
+	for(var j=0;j<q6.length;j++)
+	{
+	   if(q6[j].checked)
+		{
+		k=6;
+		if(q6[j].value == 'One-two') 
+		{
+	            	correctAnswers++;
+		}
+		}
+	}
+	for(var j=0;j<q7.length;j++)
+	{
+	   if(q7[j].checked)
+		{
+		k=7;
+		if(q7[j].value == 'Real Life Stories, Skills and Knowledge') 
+		{
+	            	correctAnswers++;
+		}
+		}
+	}
+	for(var j=0;j<q8.length;j++)
+	{
+	   if(q8[j].checked)
+		{
+		k=8;
+		if(q8[j].value == 'Subject specific essay') 
+		{
+	            	correctAnswers++;
+		}
+		}
+	}
+	for(var j=0;j<q9.length;j++)
+	{
+	   if(q9[j].checked)
+		{
+		k=9;
+		if(q9[j].value == 'UK (UCAS System)') 
+		{
+	            	correctAnswers++;
+		}
+		}
+	}
+	if(k==9)
 	{
 		document.getElementById("p1").disabled = false;     
 		//alert("You can move to next page"); 
+		alert(correctAnswers);
 
 	}
 
@@ -230,45 +277,72 @@ document.getElementById("p1").disabled = true;
     <div class="main">
         <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4">
-    <h1>CAPS COWL PROTOTYPE</h1>
-  
+   <h1>CAPS COWL PROTOTYPE</h1>
 <form name="f1" action="">
 FORM QUESTIONS--------- <br><br><br>
-<label>1.Methods to re-check your SOP are:</label>
-<br><input type="radio"  onclick="myfunction()" name="ques1" value="ans1">Reading the piece backwards<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans2">Taking advice from professors<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans3">Reading content after a break<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans4">All of the above<br><br>
+<label>1.Open Type of Essays are given by:</label>
+<br><input type="radio"  onclick="myfunction()" name="ques1" value="ans1">UK<br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="ans2">US<br><br>
 
-<label>2.What are the basic components that are to be included your SoP?</label>
-<br><input type="radio" onclick="myfunction()" name="ques2" value="ans1">Central Theme<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans2">Credibility<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans3">Uniqueness<br>
+<label>2.Open type essays can include::</label>
+<br><input type="radio" onclick="myfunction()" name="ques2" value="ans1">Autobiographies<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans2">Real-life stories<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans3">Incidents linked to one’s life<br>
    <input type="radio" onclick="myfunction()" name="ques2" value="ans4">All of the above<br><br>
 
-<label>3.Why should the central theme be given importance in a Statement of Purpose:</label>
-<br><input type="radio" onclick="myfunction()" name="ques3" value="ans1">To understand the key points the question poses and check if answer relates to the points. <br>
-   <input type="radio" onclick="myfunction()" name="ques3" value="ans2">To Understand the key points in the question and criticise the points <br>
-   <input type="radio"  onclick="myfunction()" name="ques3" value="ans3">To Understand the key points and fabricate facts<br>
-   <input type="radio" onclick="myfunction()" name="ques3" value="ans4">All of the above<br><br>
+<label>3.Word count in topic related essays varies from:</label>
+<br><input type="radio" onclick="myfunction()" name="ques3" value="ans1">600-1000<br>
+   <input type="radio" onclick="myfunction()" name="ques3" value="ans2">500-600e<br>
+   <input type="radio"  onclick="myfunction()" name="ques3" value="ans3">300-700<br>
+   <input type="radio" onclick="myfunction()" name="ques3" value="ans4">900-1300<br><br>
 
-<label>4.To make my Statement of Purpose unique, I will</label>
-<br><input type="radio" onclick="myfunction()" name="ques4" value="ans1">Replace common words with synonyms  <br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans2">Use apt words for each situation <br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans3">Use sans serif fonts<br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans4">Use different fonts for different sections<br><br>
+<label>4.Generally, how many professor references are required in US?</label>
+<br><input type="radio" onclick="myfunction()" name="ques4" value="ans1">One-two<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="ans2">Three<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="ans3">No need of professor reference<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="ans4">Minimum five<br><br>
 
-<label>5.To make a uniform structure in my Statement of Purpose, I will:</label>
-<br><input type="radio" onclick="myfunction()" name="ques5" value="ans1">Follow a particular format throughout <br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans2">Use different fonts for different section <br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans3">Use same format for heading and body<br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans4">Make heading and body bold<br><br>
+
+<label>5.Answering a question can be done in:</label>
+<br><input type="radio" onclick="myfunction()" name="ques5" value="ans1">Personal Essay<br>
+   <input type="radio" onclick="myfunction()" name="ques5" value="ans2">Common App System<br>
+   <input type="radio" onclick="myfunction()" name="ques5" value="ans3">CV<br>
+   <input type="radio" onclick="myfunction()" name="ques5" value="ans4">Resume<br><br>
+
+
+<label>6.Generally, how many professor references are required in UK?</label>
+<br><input type="radio" onclick="myfunction()" name="ques6" value="ans1">One-two<br>
+   <input type="radio" onclick="myfunction()" name="ques6" value="ans2">Three<br>
+   <input type="radio" onclick="myfunction()" name="ques6" value="ans3">Minimum Five<br>
+   <input type="radio" onclick="myfunction()" name="ques6" value="ans4">No need of professor reference<br><br>
+
+
+<label>7.UCAS system looks forward to:</label>
+<br><input type="radio" onclick="myfunction()" name="ques7" value="ans1">Real Life Stories, Skills and Knowledge  <br>
+   <input type="radio" onclick="myfunction()" name="ques7" value="ans2">Two or more essays<br>
+   <input type="radio" onclick="myfunction()" name="ques7" value="ans3">Problem solving skills <br>
+   <input type="radio" onclick="myfunction()" name="ques7" value="ans4">50% academic and 50% extra-curricular<br><br>
+
+
+<label>8.More importance to Academics are given in:</label>
+<br><input type="radio" onclick="myfunction()" name="ques8" value="ans1">UK (UCAS System)<br>
+   <input type="radio" onclick="myfunction()" name="ques8" value="ans2">US (CommonApp System)<br>
+   <input type="radio" onclick="myfunction()" name="ques8" value="ans3">Both give equal weightage for academics<br>
+   <input type="radio" onclick="myfunction()" name="ques8" value="ans4">Academics is not given much importance<br><br>
+
+
+<label>9.Common App System looks forward to::</label>
+<br><input type="radio" onclick="myfunction()" name="ques9" value="ans1">Autobiographical essay <br>
+   <input type="radio" onclick="myfunction()" name="ques9" value="ans2">One -Two essays<br>
+   <input type="radio" onclick="myfunction()" name="ques9" value="ans3">Subject specific essay <br>
+   <input type="radio" onclick="myfunction()" name="ques9" value="ans4">Development of personal skills and abilities<br><br>
+
+
 
 
 
 <button type="button" id ="p1" onclick = "validate_ans()">Click Me!</button> 
 </form>
-
 
 
 

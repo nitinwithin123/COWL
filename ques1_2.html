@@ -17,7 +17,8 @@
   <!-- Google	Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
     
-<script>
+    
+    <script>
 
 
 function validate_ans()
@@ -28,8 +29,6 @@ function validate_ans()
 
 function myfunction()
 {
-  
-
 	var correctAnswers = 0;
 
 	var q1=document.f1.ques1;  
@@ -37,6 +36,9 @@ function myfunction()
 	var q3=document.f1.ques3;  
 	var q4=document.f1.ques4; 
 	var q5=document.f1.ques5;  
+	var q6=document.f1.ques6;
+
+		
   
 	var k=0;
 
@@ -45,18 +47,18 @@ function myfunction()
 	   if(q1[j].checked)
 		{
 		k=1;
-		if(q1[j].value == 'Reading content after a break') 
+		if(q1[j].value == 'Will and dedication') 
 		{
 	            	correctAnswers++;
 		}
-		}
-	}
+        }
+    }
 	for(var j=0;j<q2.length;j++)
 	{
 	   if(q2[j].checked)
 		{
 		k=2;
-		if(q2[j].value == 'All of the above') 
+		if(q2[j].value == 'Purpose') 
 		{
 	            	correctAnswers++;
 		}
@@ -67,7 +69,7 @@ function myfunction()
 	   if(q3[j].checked)
 		{
 		k=3;
-		if(q3[j].value == 'To understand the key points the question poses and check if answer relates to the points.') 
+		if(q3[j].value == 'Details of grievances') 
 		{
 	            	correctAnswers++;
 		}
@@ -78,7 +80,7 @@ function myfunction()
 	   if(q4[j].checked)
 		{
 		k=4;
-		if(q4[j].value == 'Use apt words for each situation') 
+		if(q4[j].value == 'All of the above') 
 		{
 	            	correctAnswers++;
 		}
@@ -89,17 +91,28 @@ function myfunction()
 	   if(q5[j].checked)
 		{
 		k=5;
-		if(q5[j].value == 'Follow a particular format throughout') 
+		if(q5[j].value == 'Explain and communicate your talents and skills') 
 		{
 	            	correctAnswers++;
 		}
 		}
 	}
-
-	if(k==5)
+	for(var j=0;j<q6.length;j++)
+	{
+	   if(q6[j].checked)
+		{
+		k=6;
+		if(q6[j].value == 'Drawbacks') 
+		{
+	            	correctAnswers++;
+		}
+		}
+	}
+	if(k==6)
 	{
 		document.getElementById("p1").disabled = false;     
 		//alert("You can move to next page"); 
+		alert(correctAnswers);
 
 	}
 
@@ -230,46 +243,50 @@ document.getElementById("p1").disabled = true;
     <div class="main">
         <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4">
-    <h1>CAPS COWL PROTOTYPE</h1>
-  
-<form name="f1" action="">
+            <form name="f1" action="">
 FORM QUESTIONS--------- <br><br><br>
-<label>1.Methods to re-check your SOP are:</label>
-<br><input type="radio"  onclick="myfunction()" name="ques1" value="ans1">Reading the piece backwards<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans2">Taking advice from professors<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans3">Reading content after a break<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans4">All of the above<br><br>
+<label>1.The Statement describes the student's:</label>
+<br><input type="radio"  onclick="myfunction()" name="ques1" value="ans1">Will and dedication<br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="ans2">Economic background<br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="ans3">Food habits<br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="ans4">Aesthetic appeal<br><br>
 
-<label>2.What are the basic components that are to be included your SoP?</label>
-<br><input type="radio" onclick="myfunction()" name="ques2" value="ans1">Central Theme<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans2">Credibility<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans3">Uniqueness<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans4">All of the above<br><br>
+<label>2.The most important aspect of the statement is the:</label>
+<br><input type="radio" onclick="myfunction()" name="ques2" value="ans1"> Font used<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans2">Formatting<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans3">Purpose<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans4">Aesthetic appeal <br><br>
 
-<label>3.Why should the central theme be given importance in a Statement of Purpose:</label>
-<br><input type="radio" onclick="myfunction()" name="ques3" value="ans1">To understand the key points the question poses and check if answer relates to the points. <br>
-   <input type="radio" onclick="myfunction()" name="ques3" value="ans2">To Understand the key points in the question and criticise the points <br>
-   <input type="radio"  onclick="myfunction()" name="ques3" value="ans3">To Understand the key points and fabricate facts<br>
-   <input type="radio" onclick="myfunction()" name="ques3" value="ans4">All of the above<br><br>
+<label>3.Out of the following one is not a basic pillar for writing SoP. Which is it?</label>
+<br><input type="radio" onclick="myfunction()" name="ques3" value="ans1">Grammar<br>
+   <input type="radio" onclick="myfunction()" name="ques3" value="ans2">Purpose<br>
+   <input type="radio"  onclick="myfunction()" name="ques3" value="ans3">Details of grievances<br>
+   <input type="radio" onclick="myfunction()" name="ques3" value="ans4">Experiences <br><br>
 
-<label>4.To make my Statement of Purpose unique, I will</label>
-<br><input type="radio" onclick="myfunction()" name="ques4" value="ans1">Replace common words with synonyms  <br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans2">Use apt words for each situation <br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans3">Use sans serif fonts<br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans4">Use different fonts for different sections<br><br>
+<label>4.Branding helps you to:</label>
+<br><input type="radio" onclick="myfunction()" name="ques4" value="ans1">Specifically mention your qualities<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="ans2">Shows confidence and diligence<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="ans3">Puts you one step forward towards admission<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="ans4">All of the above<br><br>
 
-<label>5.To make a uniform structure in my Statement of Purpose, I will:</label>
-<br><input type="radio" onclick="myfunction()" name="ques5" value="ans1">Follow a particular format throughout <br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans2">Use different fonts for different section <br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans3">Use same format for heading and body<br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans4">Make heading and body bold<br><br>
 
+<label>5.A Statement of Purpose acts as a medium to:</label>
+<br><input type="radio" onclick="myfunction()" name="ques5" value="ans1">Explain and communicate your talents and skills<br>
+   <input type="radio" onclick="myfunction()" name="ques5" value="ans2">Suggest the admission panel about their mistakes <br>
+   <input type="radio" onclick="myfunction()" name="ques5" value="ans3">Inform the institution about the exam system you are comfortable with <br>
+   <input type="radio" onclick="myfunction()" name="ques5" value="ans4">None of the above<br><br>
+
+
+<label>6.A good brand should not suggest</label>
+<br><input type="radio" onclick="myfunction()" name="ques6" value="ans1">Credibility<br>
+   <input type="radio" onclick="myfunction()" name="ques6" value="ans2">Quality<br>
+   <input type="radio" onclick="myfunction()" name="ques6" value="ans3">Price<br>
+   <input type="radio" onclick="myfunction()" name="ques6" value="ans4">Drawbacks<br><br>
 
 
 <button type="button" id ="p1" onclick = "validate_ans()">Click Me!</button> 
 </form>
-
-
+           
 
 
         </div>

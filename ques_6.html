@@ -22,14 +22,13 @@
 
 function validate_ans()
 {
-	window.location.href = 'ques_3.html';
+	window.location.href = 'ques_7.html';
 }
 
 
 function myfunction()
 {
   
-
 	var correctAnswers = 0;
 
 	var q1=document.f1.ques1;  
@@ -37,6 +36,8 @@ function myfunction()
 	var q3=document.f1.ques3;  
 	var q4=document.f1.ques4; 
 	var q5=document.f1.ques5;  
+	var q6=document.f1.ques6;
+	var q7=document.f1.ques7;
   
 	var k=0;
 
@@ -45,7 +46,7 @@ function myfunction()
 	   if(q1[j].checked)
 		{
 		k=1;
-		if(q1[j].value == 'Reading content after a break') 
+		if(q1[j].value == 'An overview of your weakness') 
 		{
 	            	correctAnswers++;
 		}
@@ -56,7 +57,7 @@ function myfunction()
 	   if(q2[j].checked)
 		{
 		k=2;
-		if(q2[j].value == 'All of the above') 
+		if(q2[j].value == 'Two-Three') 
 		{
 	            	correctAnswers++;
 		}
@@ -67,7 +68,7 @@ function myfunction()
 	   if(q3[j].checked)
 		{
 		k=3;
-		if(q3[j].value == 'To understand the key points the question poses and check if answer relates to the points.') 
+		if(q3[j].value == 'One-two') 
 		{
 	            	correctAnswers++;
 		}
@@ -78,7 +79,7 @@ function myfunction()
 	   if(q4[j].checked)
 		{
 		k=4;
-		if(q4[j].value == 'Use apt words for each situation') 
+		if(q4[j].value == 'Asking a professor whom you’ve recently met') 
 		{
 	            	correctAnswers++;
 		}
@@ -89,14 +90,36 @@ function myfunction()
 	   if(q5[j].checked)
 		{
 		k=5;
-		if(q5[j].value == 'Follow a particular format throughout') 
+		if(q5[j].value == 'Attorney') 
+		{
+	            	correctAnswers++;
+		}
+		}
+	}
+	for(var j=0;j<q6.length;j++)
+	{
+	   if(q6[j].checked)
+		{
+		k=6;
+		if(q6[j].value == 'Personality') 
+		{
+	            	correctAnswers++;
+		}
+		}
+	}
+	for(var j=0;j<q7.length;j++)
+	{
+	   if(q7[j].checked)
+		{
+		k=7;
+		if(q7[j].value == 'Academic development and Personal development') 
 		{
 	            	correctAnswers++;
 		}
 		}
 	}
 
-	if(k==5)
+	if(k==7)
 	{
 		document.getElementById("p1").disabled = false;     
 		//alert("You can move to next page"); 
@@ -234,36 +257,46 @@ document.getElementById("p1").disabled = true;
   
 <form name="f1" action="">
 FORM QUESTIONS--------- <br><br><br>
-<label>1.Methods to re-check your SOP are:</label>
-<br><input type="radio"  onclick="myfunction()" name="ques1" value="ans1">Reading the piece backwards<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans2">Taking advice from professors<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans3">Reading content after a break<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans4">All of the above<br><br>
+<label>1.The ending paragraphs should not contain:</label>
+<br><input type="radio"  onclick="myfunction()" name="ques1" value="ans1">The main highlights of the statement<br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="ans2">An ending quotation<br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="ans3">An overview of your weakness<br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="ans4">Reflection of your strongest points<br><br>
 
-<label>2.What are the basic components that are to be included your SoP?</label>
-<br><input type="radio" onclick="myfunction()" name="ques2" value="ans1">Central Theme<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans2">Credibility<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans3">Uniqueness<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans4">All of the above<br><br>
+<label>2.Generally, how many  professor references are required in the US?</label>
+<br><input type="radio" onclick="myfunction()" name="ques2" value="ans1">Two-Three<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans2">One<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans3">More than three<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans4">None of the above<br><br>
 
-<label>3.Why should the central theme be given importance in a Statement of Purpose:</label>
-<br><input type="radio" onclick="myfunction()" name="ques3" value="ans1">To understand the key points the question poses and check if answer relates to the points. <br>
-   <input type="radio" onclick="myfunction()" name="ques3" value="ans2">To Understand the key points in the question and criticise the points <br>
-   <input type="radio"  onclick="myfunction()" name="ques3" value="ans3">To Understand the key points and fabricate facts<br>
-   <input type="radio" onclick="myfunction()" name="ques3" value="ans4">All of the above<br><br>
+<label>3.Generally, how many references are required in the UK?</label>
+<br><input type="radio" onclick="myfunction()" name="ques3" value="ans1">One-Two<br>
+   <input type="radio" onclick="myfunction()" name="ques3" value="ans2">Three<br>
+   <input type="radio"  onclick="myfunction()" name="ques3" value="ans3">More than three<br>
+   <input type="radio" onclick="myfunction()" name="ques3" value="ans4">None of the above<br><br>
 
-<label>4.To make my Statement of Purpose unique, I will</label>
-<br><input type="radio" onclick="myfunction()" name="ques4" value="ans1">Replace common words with synonyms  <br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans2">Use apt words for each situation <br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans3">Use sans serif fonts<br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans4">Use different fonts for different sections<br><br>
+<label>4.To obtain reference letters, which of the following should not be done:</label>
+<br><input type="radio" onclick="myfunction()" name="ques4" value="ans1">Giving them ample time (More than two-three weeks)<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="ans2">Asking a professor whom you’ve recently met<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="ans3">Letting them know your achievements and contributions<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="ans4">None of the above<br><br>
 
-<label>5.To make a uniform structure in my Statement of Purpose, I will:</label>
-<br><input type="radio" onclick="myfunction()" name="ques5" value="ans1">Follow a particular format throughout <br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans2">Use different fonts for different section <br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans3">Use same format for heading and body<br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans4">Make heading and body bold<br><br>
 
+<label>5.If in British English we say Barrister then in American English we say:</label>
+<br><input type="radio" onclick="myfunction()" name="ques5" value="ans1">Lawyer<br>
+   <input type="radio" onclick="myfunction()" name="ques5" value="ans2">Attorney<br><br>
+
+
+<label>6.Institutions in the UK focus 80 % on development</label>
+<br><input type="radio" onclick="myfunction()" name="ques6" value="ans1">Personality<br>
+   <input type="radio" onclick="myfunction()" name="ques6" value="ans2">Academic<br><br>
+
+
+<label>7.Institutions in the US focus more on</label>
+<br><input type="radio" onclick="myfunction()" name="ques7" value="ans1">Academic development and Personal development <br>
+   <input type="radio" onclick="myfunction()" name="ques7" value="ans2">Research Skills<br>
+   <input type="radio" onclick="myfunction()" name="ques7" value="ans3">Technical Knowledge<br>
+   <input type="radio" onclick="myfunction()" name="ques7" value="ans4">Intellectual approach<br><br>
 
 
 <button type="button" id ="p1" onclick = "validate_ans()">Click Me!</button> 

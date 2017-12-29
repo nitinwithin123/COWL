@@ -22,14 +22,14 @@
 
 function validate_ans()
 {
-	window.location.href = 'ques_3.html';
+	window.location.href = 'ques_5.html';
 }
 
 
 function myfunction()
 {
   
-
+  
 	var correctAnswers = 0;
 
 	var q1=document.f1.ques1;  
@@ -37,6 +37,8 @@ function myfunction()
 	var q3=document.f1.ques3;  
 	var q4=document.f1.ques4; 
 	var q5=document.f1.ques5;  
+	var q6=document.f1.ques6;
+	var q7=document.f1.ques7;
   
 	var k=0;
 
@@ -45,7 +47,7 @@ function myfunction()
 	   if(q1[j].checked)
 		{
 		k=1;
-		if(q1[j].value == 'Reading content after a break') 
+		if(q1[j].value == 'Be confident and authentic') 
 		{
 	            	correctAnswers++;
 		}
@@ -56,7 +58,7 @@ function myfunction()
 	   if(q2[j].checked)
 		{
 		k=2;
-		if(q2[j].value == 'All of the above') 
+		if(q2[j].value == 'Introduction') 
 		{
 	            	correctAnswers++;
 		}
@@ -67,7 +69,7 @@ function myfunction()
 	   if(q3[j].checked)
 		{
 		k=3;
-		if(q3[j].value == 'To understand the key points the question poses and check if answer relates to the points.') 
+		if(q3[j].value == 'All of the above') 
 		{
 	            	correctAnswers++;
 		}
@@ -78,7 +80,7 @@ function myfunction()
 	   if(q4[j].checked)
 		{
 		k=4;
-		if(q4[j].value == 'Use apt words for each situation') 
+		if(q4[j].value == 'A strong quotation or message') 
 		{
 	            	correctAnswers++;
 		}
@@ -89,17 +91,38 @@ function myfunction()
 	   if(q5[j].checked)
 		{
 		k=5;
-		if(q5[j].value == 'Follow a particular format throughout') 
+		if(q5[j].value == 'Mind-Maps and Space Diagrams') 
 		{
 	            	correctAnswers++;
 		}
 		}
 	}
-
-	if(k==5)
+	for(var j=0;j<q6.length;j++)
+	{
+	   if(q6[j].checked)
+		{
+		k=6;
+		if(q6[j].value == 'All of the above') 
+		{
+	            	correctAnswers++;
+		}
+		}
+	}
+	for(var j=0;j<q7.length;j++)
+	{
+	   if(q7[j].checked)
+		{
+		k=7;
+		if(q7[j].value == 'All of the above') 
+		{
+	            	correctAnswers++;
+		}
+		}
+	}
+	if(k==7)
 	{
 		document.getElementById("p1").disabled = false;     
-		//alert("You can move to next page"); 
+		alert("You can move to next page"); 
 
 	}
 
@@ -231,44 +254,64 @@ document.getElementById("p1").disabled = true;
         <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4">
     <h1>CAPS COWL PROTOTYPE</h1>
-  
 <form name="f1" action="">
 FORM QUESTIONS--------- <br><br><br>
-<label>1.Methods to re-check your SOP are:</label>
-<br><input type="radio"  onclick="myfunction()" name="ques1" value="ans1">Reading the piece backwards<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans2">Taking advice from professors<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans3">Reading content after a break<br>
-   <input type="radio" onclick="myfunction()" name="ques1" value="ans4">All of the above<br><br>
+<label>1.What are the factors that has to be followed while crafting a SoP:</label>
+<br><input type="radio"  onclick="myfunction()" name="ques1" value="ans1">Fabricate qualities to impress the admission committee <br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="ans2">Manipulate incidents so that the committee will feel that you as an apt candidate <br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="ans3">Be confident and authentic <br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="ans4">Hide your weakness<br><br>
 
-<label>2.What are the basic components that are to be included your SoP?</label>
-<br><input type="radio" onclick="myfunction()" name="ques2" value="ans1">Central Theme<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans2">Credibility<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans3">Uniqueness<br>
-   <input type="radio" onclick="myfunction()" name="ques2" value="ans4">All of the above<br><br>
+<label>2.Reading the following text, which part of the essay do you think this is?<br>
+"To reach my goal of total comprehension of natural phenomena, I realised that I must begin 
+with knowledge that may be uninteresting by itself. However, this knowledge will form the foundation 
+of an accurate view of the universe. Much like every step while hiking leads the hiker nearer the mountain 
+peak, all knowledge leads the scientist nearer total understanding".</label>
+<br><input type="radio" onclick="myfunction()" name="ques2" value="ans1">Introduction<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans2">Middle body<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans3">Ending<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="ans4">None of the above<br><br>
 
-<label>3.Why should the central theme be given importance in a Statement of Purpose:</label>
-<br><input type="radio" onclick="myfunction()" name="ques3" value="ans1">To understand the key points the question poses and check if answer relates to the points. <br>
-   <input type="radio" onclick="myfunction()" name="ques3" value="ans2">To Understand the key points in the question and criticise the points <br>
-   <input type="radio"  onclick="myfunction()" name="ques3" value="ans3">To Understand the key points and fabricate facts<br>
-   <input type="radio" onclick="myfunction()" name="ques3" value="ans4">All of the above<br><br>
+<label>3.The mid-body of the statement should comprise of:</label>
+<br><input type="radio" onclick="myfunction()" name="ques3" value="ans1">Your work till date<br>
+   <input type="radio" onclick="myfunction()" name="ques3" value="ans2">How you got inspired to follow your dreams<br>
+   <input type="radio"  onclick="myfunction()" name="ques3" value="ans3">Details of grievances<br>
+   <input type="radio" onclick="myfunction()" name="ques3" value="ans4">All of the above. <br><br>
 
-<label>4.To make my Statement of Purpose unique, I will</label>
-<br><input type="radio" onclick="myfunction()" name="ques4" value="ans1">Replace common words with synonyms  <br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans2">Use apt words for each situation <br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans3">Use sans serif fonts<br>
-   <input type="radio" onclick="myfunction()" name="ques4" value="ans4">Use different fonts for different sections<br><br>
+<label>4.A SOP should be start with:</label>
+<br><input type="radio" onclick="myfunction()" name="ques4" value="ans1">A one liner<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="ans2">Problems in your life<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="ans3">A strong quotation or message<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="ans4">None of the above<br><br>
 
-<label>5.To make a uniform structure in my Statement of Purpose, I will:</label>
-<br><input type="radio" onclick="myfunction()" name="ques5" value="ans1">Follow a particular format throughout <br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans2">Use different fonts for different section <br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans3">Use same format for heading and body<br>
-   <input type="radio" onclick="myfunction()" name="ques5" value="ans4">Make heading and body bold<br><br>
+
+<label>5.How would you construct your idea to write SOP:</label>
+<br><input type="radio" onclick="myfunction()" name="ques5" value="ans1">Fabricating a story <br>
+   <input type="radio" onclick="myfunction()" name="ques5" value="ans2">Lying about incidents.<br>
+   <input type="radio" onclick="myfunction()" name="ques5" value="ans3">Mind-Maps and Space Diagrams.<br>
+   <input type="radio" onclick="myfunction()" name="ques5" value="ans4">Manipulating facts.<br><br>
+
+
+<label>6.Keeping an optimistic tone in your SOP can be done through:</label>
+<br><input type="radio" onclick="myfunction()" name="ques6" value="ans1">Being honest and confident<br>
+   <input type="radio" onclick="myfunction()" name="ques6" value="ans2">Talking from your point of view<br>
+   <input type="radio" onclick="myfunction()" name="ques6" value="ans3">Using the Essay to answer a question as well as portray a current scenario<br>
+   <input type="radio" onclick="myfunction()" name="ques6" value="ans4">All of the aboves<br><br>
+
+
+<label>7.The ending paragraphs should contain:</label>
+<br><input type="radio" onclick="myfunction()" name="ques7" value="ans1">The main highlights of the statement<br>
+   <input type="radio" onclick="myfunction()" name="ques7" value="ans2">An ending quotation.<br>
+   <input type="radio" onclick="myfunction()" name="ques7" value="ans3">All of the above.<br>
+   <input type="radio" onclick="myfunction()" name="ques7" value="ans4">None of the above.<br><br>
+
+
+
 
 
 
 <button type="button" id ="p1" onclick = "validate_ans()">Click Me!</button> 
 </form>
-
 
 
 
